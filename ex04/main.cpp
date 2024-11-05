@@ -14,6 +14,10 @@ int main (int argc, char **argv) {
 
 	std::string to_sub = argv[2];
 	std::string to_rep = argv[3];
+	if (to_sub == "" && to_rep == "") {
+		std::cout << "Error: no word to replace\n";
+		return 1;
+	}
 	filename = argv[1];
 	filename.append(".replace");
 	myfile.open(argv[1]);
